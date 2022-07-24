@@ -73,4 +73,35 @@ body {
     max-width: 1440px;
 }
 
+.header {
+    padding: 50px 0 10px;
+
+    .medium-container {
+        @include flex-center-space-between();
+
+        .navigation {
+            @include flex-center();
+            gap: 40px;
+
+            &__logo-wrapper {
+                &__logo {
+                    transition: 1s;   
+                }
+                &__logo:hover {
+                    opacity: 0.7;
+                }
+                &__logo:not(hover) {
+                    opacity: 1;
+                }
+            }
+
+            &__link {
+                @include dm-mono-font();
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+}
+
 
