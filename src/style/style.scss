@@ -169,4 +169,64 @@ body {
 
 }
 
+.wave-nft {
+    padding: 60px 40px;
+
+    .medium-container {
+        margin: 0;
+        @include flex-center-space-between();
+        flex-direction: row;
+        gap: 162px;
+
+        .wave-content {
+            min-width: 400px;
+
+            &__title {
+                margin-bottom: 40px;
+
+                &__grey-text {
+                    color: rgba(168, 168, 168, 1);
+                    ;
+                }
+            }
+        }
+
+        .explanation {
+            &__definition {
+                margin-bottom: 30px;
+                padding-left: 22px;
+                display: inline-block;
+                border-left: 2px solid $custon-green;
+                @include dm-mono-font();
+                font-size: 2rem;
+                line-height: 3rem;
+                color: $custon-green;
+            }
+            &__content {
+                margin-bottom: 36px;
+
+                &__subtitle {
+                    margin-bottom: 18px;
+                    max-width: 550px;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                }
+
+                &__subtitle:last-child {
+                    margin-bottom: 0;
+                }
+
+                .get-nft {
+                    padding: 14px 32px;
+                    background: transparent;
+                    border: 1px solid $custon-green;
+                    @include dm-mono-font();
+                    font-size: 1.6rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
 
