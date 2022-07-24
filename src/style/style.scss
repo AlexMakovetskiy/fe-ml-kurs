@@ -104,4 +104,69 @@ body {
     }
 }
 
+.intro {
+    padding: 60px 0;
+    @include flex-center-space-between();
+
+    .description {
+        display: inline-block;
+        margin-right: 70px;
+        padding: 20px 0 30px;
+        max-width: 425px;
+
+        &__title {
+            margin-bottom: 42px;
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+
+        &__subtitle {
+            margin-bottom: 114px;
+            max-width: 340px;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            
+        }
+
+        &__jump-documentation {
+            padding: 22px 40px;
+            border: 2px solid transparent;
+            background: $custon-green;
+            @include dm-mono-font();
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            color: initial;
+            transition: 1s;
+        }
+
+        &__jump-documentation:hover {
+            border: 2px solid $custon-green;
+            background: transparent;
+            color: $custon-green;
+        }
+    }
+    
+    .flyer-container {
+        @include flex-center-space-between();
+        display: inline-flex;
+        gap: 10px;
+        
+        &__flyer {
+            opacity: 0.7;
+        }
+
+        &__flyer:hover {
+            opacity: 1;
+            transform: scale(1.5);
+            transition: 1s;
+        }
+        &__flyer:not(hover) {
+            opacity: 0.7;
+            transform: scale(1);
+            transition: 1s;
+    }
+    }
+
+}
+
 
