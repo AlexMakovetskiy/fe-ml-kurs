@@ -1,0 +1,44 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conteiner-zero {
+    width: 100%;
+}
+
+.small-container,
+.medium-container,
+.large-container {
+    margin: 0 auto;
+}
+
+.small-container {
+    width: 700px;
+}
+
+.medium-container {
+    width: 1160px;
+}
+
+.large-container {
+    width: 1350px;
+}
+
+.text-header {
+    font-family: 'Audiowide', cursive;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+

@@ -1,0 +1,76 @@
+@mixin flex-center-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin dm-mono-font {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: beige;
+}
+
+@-webkit-keyframes ticker-animation {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+    }
+}
+@-moz-keyframes ticker-animation {
+    0% {
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -moz-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+    }
+}
+
+@keyframes ticker-animation {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }
+}
+
+$custon-green: #8DFD1B;
+
+body {
+    background: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.contacts {
+    @include flex-center();
+    gap: 12px;
+
+    &__social-media {
+        padding: 8px;
+        background: white;
+        border: 1px solid transparent;
+    }
+}
+
+.header, .section, .footer {
+    max-width: 1440px;
+}
+
+
