@@ -448,17 +448,13 @@ body {
             }
         }
 
-        .line-container::after {
+        .line-container + .line-container::before {
             margin-left: 50%;
             display: inline-block;
             content: '';
             width: 1px;
             height: 40px;
             background: $custon-green;
-        }
-
-        .line-container:last-child::after {
-            display: none;
         }
         
     }
