@@ -230,7 +230,7 @@ body {
 }
 
 .artists {
-    padding: 60px 120px;
+    padding: 120px 0;
 
     .ticker-content {
         display: block;
@@ -306,7 +306,6 @@ body {
                 background: #222222;
                 color: $custon-green;
             }
-
         }
 
         &__description {
@@ -319,7 +318,6 @@ body {
             &__photo {
                 max-height: 252px;
             }
-            
             
             &__explanation {
                 &__definition {
@@ -344,5 +342,130 @@ body {
         }
     }
 }
+
+.parallax {
+    margin: 114px 0 0;
+    max-height: 240px;
+}
+
+.roadmap {
+    margin-bottom: 240px;
+    padding: 118px 0 48px;
+
+    .roadmap__circle {
+        position: absolute;
+    }
+
+    .small-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .roadmap__title {
+            position: relative;
+            margin-bottom: 100px;
+            font-size: 3.8rem;
+            line-height: 4.5rem;
+        }
+
+        .phase-wrapper {
+            position: relative;
+            max-width: 540px;
+            min-width: 540px;
+            margin: 45px auto;
+            background: #222222;
+            border: 1px solid $custon-green;
+            margin-bottom: 50px;
+
+            &__date-wrap {
+                padding: 12px;
+                @include flex-center();
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                gap: 12px;
+                border-bottom: 1px solid $custon-green;
+                @include dm-mono-font();
+
+                &__phase-number {
+                    display: inline-block;
+                    padding: 8px 16px;
+                    border: 1px solid $custon-green;
+                    font-size: 2.8rem;
+                    line-height: 2.8rem;
+                    color: $custon-green;
+                }
+
+                &__phase-number.completed {
+                    background: $custon-green;
+                    color: #222222;
+                }
+
+                &__content {
+                    &__phase-progress {
+                        font-size: .8rem;
+                        line-height: 1.2rem;
+                        color: $custon-green;
+                    }
+    
+                    &__name {
+                        font-size: 1.6rem;
+                        line-height: 2.8rem;
+                    }
+                }
+                
+            }
+
+            &__content-wrap {
+                padding: 25px 12px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                gap: 70px;
+                
+
+                &__text-lines {
+                    max-width: 310px;
+                    font-size: 1.2rem;
+                    line-height: 2.6rem;
+
+                    &__title {
+                        margin-left: 22px;
+                    }
+
+                    &__title + &__subtitle  {
+                        margin-bottom: 32px;
+                    }
+                }
+
+                &__flyer {
+                    border-radius: 8px;
+                    max-width: 110px;
+                    max-height: 130px;
+                }
+            }
+        }
+
+        .line-container::after {
+            margin-left: 50%;
+            display: inline-block;
+            content: '';
+            width: 1px;
+            height: 40px;
+            background: $custon-green;
+        }
+
+        .line-container:last-child::after {
+            display: none;
+        }
+        
+    }
+}
+
+
+
+
 
 
