@@ -269,4 +269,80 @@ body {
 
 }
 
+.story {
+    .story__title {
+        
+        margin-bottom: 60px;
+        text-align: center;
+        font-size: 3.8rem;
+        line-height: 4.4rem;
+
+        &__grey-text {
+            color: #A8A8A8;
+        }
+    }
+
+    .about-company {
+        @include flex-center();
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        &__tab-wrapper {
+            display: flex;
+            min-width: 24%;
+            flex-direction: column;
+            gap: 2px;
+
+            &__tab {
+                padding: 28px 0 28px 26px;
+                @include dm-mono-font();
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                border: 1px solid transparent;
+                cursor: pointer;
+            }
+            &__tab:hover {
+                background: #222222;
+                color: $custon-green;
+            }
+
+        }
+
+        &__description {
+            padding: 60px;
+            max-width: 75%;
+            display: inline-flex;
+            gap: 40px;
+            background: #222222;
+
+            &__photo {
+                max-height: 252px;
+            }
+            
+            
+            &__explanation {
+                &__definition {
+                    display: inline-block;
+                    padding-left: 22px;
+                    margin-bottom: 28px;
+                    border-left: 2px solid $custon-green;
+                    @include dm-mono-font();
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    color: $custon-green;
+                }
+
+                &__content {
+                    &__subtitle {
+                        margin-bottom: 18px;
+                        font-size: 1.6rem;
+                        line-height: 2.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
