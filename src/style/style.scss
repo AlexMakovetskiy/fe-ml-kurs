@@ -505,6 +505,7 @@ body {
 }
 
 .team {
+    margin-bottom: 230px;
     .ticker-content {
         margin-bottom: 120px;
 
@@ -553,7 +554,57 @@ body {
                 line-height: 1.9rem;
             }
         }
+    }
+}
 
+.discord-link {
+    .medium-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+
+        .description {
+            padding: 117px 100px 117px 0;
+
+            &__content-wrapper {
+                max-height: 350px;
+                max-width: 484px;
+                
+                &__title {
+                    font-size: 5rem;
+
+                    &__green {
+                        margin-bottom: 34px;
+                        color: $custon-green;
+                        font-size: 5rem;
+                    }
+                }
+
+                &__subtitle {
+                    margin-bottom: 34px;
+                    font-size: 1.6rem;
+                    line-height: 2.6rem;
+                }
+
+                &__open-discord-link{
+                    padding: 14px 30px;
+                    @include flex-center();
+                    gap: 8px;
+                    background: $custon-green;
+                    color: black;
+                }
+            }
+        }
+
+        .graphic-content {
+            @include flex-center();
+            
+            &__flyer {
+                margin: 0 auto;
+                height: 584px;
+                width: 490px;
+            }
+        }
     }
 }
 
