@@ -183,11 +183,6 @@ body {
 
             &__title {
                 margin-bottom: 40px;
-
-                &__grey-text {
-                    color: rgba(168, 168, 168, 1);
-                    ;
-                }
             }
         }
 
@@ -276,10 +271,6 @@ body {
         text-align: center;
         font-size: 3.8rem;
         line-height: 4.4rem;
-
-        &__grey-text {
-            color: #A8A8A8;
-        }
     }
 
     .about-company {
@@ -480,7 +471,53 @@ body {
     }
 }
 
+.faq {
+    .medium-container {
+        @include flex-center-space-between();
+        flex-wrap: nowrap;
+        gap: 220px;
 
+        .faq__name-wrappper {
+            &__title {
+                margin-bottom: 50px;
+                word-wrap: break-word;
+                font-size: 3.8rem;
+                line-height: 4.5rem;
+            }  
+        }
+
+        .faq__description {
+            padding: 24px;
+            background: #222222;
+
+            &__title-content {
+                margin: 26px 0;
+                @include flex-center-space-between();
+                flex-direction: row;
+                @include dm-mono-font();
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+
+                &__square {
+                    background: white;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid white;
+                }
+            }
+
+            &__title-content:first-child { 
+                margin: 0 0 26px;
+            }
+
+            &__subtitle {
+                font-size: 1.2rem;
+                line-height: 1.9rem;
+                color: #C4C4C4;
+            }
+        }
+    }
+}
 
 
 
