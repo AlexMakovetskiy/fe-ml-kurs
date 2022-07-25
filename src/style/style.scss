@@ -598,13 +598,56 @@ body {
 
         .graphic-content {
             @include flex-center();
-            
+
             &__flyer {
                 margin: 0 auto;
                 height: 584px;
                 width: 490px;
             }
         }
+    }
+}
+
+.footer {
+    background: #42006A;
+    padding: 100px 0;
+
+    .medium-container {
+        max-height: 138px;
+        @include flex-center-space-between();
+        align-items: start;
+        gap: 64px;
+        @include dm-mono-font();
+
+        .logo-wrapper {
+            &__meta-logo {
+                margin-bottom: 64px;
+            }
+
+            &__rights {
+                min-width: 200px;
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 117px) 208px;
+            grid-template-rows: repeat(3, 20px);
+            grid-column-gap: 80px;
+            grid-row-gap: 30px;
+            grid-auto-flow: column;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            word-wrap: normal;
+
+            &__title.subtitle {
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+            }
+        }
+
     }
 }
 
