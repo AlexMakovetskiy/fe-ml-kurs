@@ -227,23 +227,6 @@ body {
 .artists {
     padding: 120px 0;
 
-    .ticker-content {
-        display: block;
-        margin-bottom: 126px;
-        white-space: nowrap;
-        overflow: hidden;
-        &__title {
-            display: inline-block;
-            padding-left: 100%;
-            -webkit-animation: ticker-animation 20s infinite linear;
-            -moz-animation: ticker-animation 20s infinite linear;
-            animation: ticker-animation 20s infinite linear;
-            font-size: 8rem;
-            line-height: 8.8rem;
-            word-spacing: 390px;
-        }
-    }
-
     .artists-content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -472,6 +455,8 @@ body {
 }
 
 .faq {
+    margin-bottom: 100px;
+
     .medium-container {
         @include flex-center-space-between();
         flex-wrap: nowrap;
@@ -519,6 +504,58 @@ body {
     }
 }
 
+.team {
+    .ticker-content {
+        margin-bottom: 120px;
+
+        &__title {
+            -webkit-animation: ticker-animation 35s infinite linear;
+            -moz-animation: ticker-animation 35s infinite linear;
+            animation: ticker-animation 35s infinite linear;
+            word-spacing: 256px;
+        }
+    }
+
+    .medium-container {
+        @include flex-center-space-between();
+        flex-wrap: nowrap;
+        gap: 100px;
+        text-align: center;
+
+        .team__card {
+            &__photo {
+                margin-bottom: 20px;
+            }
+
+            &__title {
+                margin-bottom: 18px;
+                @include dm-mono-font();
+                font-size: 2rem;
+                line-height: 2.8rem;
+            }
+
+            &__subtitle {
+                margin-bottom: 22px;
+                @include dm-mono-font();
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                color: $custon-green;
+            }
+
+            &__contacts {
+                margin-bottom: 22px;
+            }
+
+            &__description {
+                margin: 0 auto;
+                max-width: 240px;
+                font-size: 1.2rem;
+                line-height: 1.9rem;
+            }
+        }
+
+    }
+}
 
 
 
