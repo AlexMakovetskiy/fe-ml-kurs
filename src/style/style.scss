@@ -349,7 +349,7 @@ body {
 }
 
 .roadmap {
-    margin-bottom: 240px;
+    margin-bottom: 120px;
     padding: 118px 0 48px;
 
     .roadmap__circle {
@@ -459,6 +459,28 @@ body {
         
     }
 }
+
+.partners {
+    margin: 120px 0;
+    &__title {
+        margin-bottom: 50px;
+        @include dm-mono-font();
+        text-align: center;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        color: $custon-green;
+    }
+
+    &__logo-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 84px;
+        grid-row-gap: 60px;
+    }
+}
+
+
 
 
 
