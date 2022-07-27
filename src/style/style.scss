@@ -743,7 +743,7 @@ body {
 }
 
 .discord-link {
-    margin-bottom: 118px;
+    padding: 120px 0;
 
     .medium-container {
         display: grid;
@@ -778,6 +778,7 @@ body {
                     @include flex-center();
                     gap: 8px;
                     background: $custon-green;
+                    border: 1px solid transparent;
                     color: black;
                     transition: 1s;
                 }

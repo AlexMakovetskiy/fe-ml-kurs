@@ -22,8 +22,8 @@
         .medium-container {
             .graphic-content {
                 &__flyer {
-                    height: 382px;
-                    width: 343px;
+                    height: 520px;
+                    width: 436px;
                 }
             }
         }
@@ -31,9 +31,6 @@
 }
 
 @media (max-width: 1200px) {
-    body {
-        background: limegreen;
-    }
     .header, .section, .footer {
         width: 100%;
         max-width: 1200px;
@@ -50,6 +47,32 @@
     
     .large-container {
         max-width: 1350px;
+    }
+
+    .artists {
+        .artists-content {
+            grid-column-gap: 40px;
+            grid-row-gap: 40px;
+    
+            &__card {
+                &__photo {
+                    width: 218px;
+                    height: 218px;
+                }
+            }
+        }
+    
+    }
+
+    .team {
+        .medium-container {
+            .team__card {
+                &__photo {
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+        }
     }
 }
 
