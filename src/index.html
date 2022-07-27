@@ -8,13 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- font-family: 'Audiowide', cursive;
-    font-family: 'DM Mono', monospace;
-    font-family: 'Inter', sans-serif; -->
     <link rel="stylesheet" href="./style/reset.scss">
     <link rel="stylesheet" href="./style/style.scss">
     <link rel="stylesheet" href="./style/common.scss">
-
+    <script src="./JS/script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -29,16 +26,16 @@
             </div>
             
             <div class="contacts">
-                <button class="contacts__social-media twitter">
+                <button class="contacts__social-media twitter" onclick="meta_link_twitter()">
                     <img src="./assets/vector/contacts/twitter_logo.svg" alt="twitter">
                 </button>
-                <button class="contacts__social-media discord">
+                <button class="contacts__social-media discord" onclick="meta_link_discord()">
                     <img src="./assets/vector/contacts/discord_logo.svg" alt="discord">
                 </button>
-                <button class="contacts__social-media youtube">
+                <button class="contacts__social-media youtube" onclick="meta_link_youtube()">
                     <img src="./assets/vector/contacts/youtube_logo.svg" alt="youtube">
                 </button>
-                <button class="contacts__social-media telegram">
+                <button class="contacts__social-media telegram" onclick="meta_link_telegram()">
                     <img src="./assets/vector/contacts/telegram_logo.svg" alt="telegram">
                 </button>
             </div>
@@ -49,12 +46,12 @@
             <div class="description">
                 <h1 class="description__title text-header">META RECORD LABEl</h1>
                 <p class="description__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                <button class="description__jump-documentation">Learn more</button>
+                <button class="description__jump-documentation" onclick="meta_wiki()">Learn more</button>
             </div>
             <picture class="flyer-container">
-                <img class="flyer-container__flyer" src="./assets/img/flyers/blue-flyer.png" alt="flyer">
-                <img class="flyer-container__flyer" src="./assets/img/flyers/red-flyer.png" alt="flyer">
-                <img class="flyer-container__flyer" src="./assets/img/flyers/mix-flyer.png" alt="flyer">
+                <img class="flyer-container__flyer blue" src="./assets/img/flyers/blue-flyer.png" alt="flyer">
+                <img class="flyer-container__flyer red" src="./assets/img/flyers/red-flyer.png" alt="flyer">
+                <img class="flyer-container__flyer mixed" src="./assets/img/flyers/mix-flyer.png" alt="flyer">
             </picture>
         </div>
     </section>
@@ -73,7 +70,7 @@
                     <p class="explanation__content__subtitle">Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet dictum sit amet justo. Tortor aliquam nulla facilisi cras.</p>
                     <p class="explanation__content__subtitle">Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed felis. Aenean vel elit scelerisque mauris pellentesque pulvinar. Et malesuada fames ac turpis egestas sed tempus. Enim sit amet venenatis urna cursus eget.</p>
                     <p class="explanation__content__subtitle">Maecenas ultricies mi eget mauris pharetra et ultrices. A condimentum vitae sapien pellentesque habitant morbi.</p>
-                    <button class="get-nft">Get one on OpenSea</button>
+                    <button class="get-nft" onclick="get_nft()">Get one on OpenSea</button>
                 </div>
             </div>
         </div>
@@ -120,12 +117,29 @@
             </h2>
             <div class="about-company">
                 <div class="about-company__tab-wrapper">
-                    <p class="about-company__tab-wrapper__tab">Our founders</p>
-                    <p class="about-company__tab-wrapper__tab">Partners</p>
-                    <p class="about-company__tab-wrapper__tab">The future</p>
+                    <div class="about-company__tab-wrapper__tab">
+                        <input class="about-company__tab-wrapper__tab__switch" type="radio" id="founders-tab" checked name="css-tabs">
+                        <label for="founders-tab" class="about-company__tab-wrapper__tab__title">Our founders</label> 
+                        <div class="about-company__tab-wrapper__tab__photo-wrap">
+                            <img src="./assets/img/founders/pic1.png" alt="photo" class="about-company__tab-wrapper__tab__photo-wrap__photo founders">
+                        </div>
+                    </div>
+                    <div class="about-company__tab-wrapper__tab">
+                        <input class="about-company__tab-wrapper__tab__switch" type="radio" id="partners-tab" name="css-tabs">
+                        <label for="partners-tab" class="about-company__tab-wrapper__tab__title">Partners</label> 
+                        <div class="about-company__tab-wrapper__tab__photo-wrap">
+                            <img src="./assets/img/founders/pic2.jpg" alt="photo" class="about-company__tab-wrapper__tab__photo-wrap__photo partners">
+                        </div>
+                    </div>
+                    <div class="about-company__tab-wrapper__tab">
+                        <input class="about-company__tab-wrapper__tab__switch" type="radio" id="future-tab" name="css-tabs">
+                        <label for="future-tab" class="about-company__tab-wrapper__tab__title">The future</label> 
+                        <div class="about-company__tab-wrapper__tab__photo-wrap">
+                            <img src="./assets/img/founders/pic3.jpg" alt="photo" class="about-company__tab-wrapper__tab__photo-wrap__photo future">
+                        </div>
+                    </div>
                 </div>
                 <div class="about-company__description">
-                    <img class="about-company__description__photo" src="./assets/img/founders.png" alt="photo">
                     <div class="about-company__description__explanation">
                         <span class="about-company__description__explanation__definition">META record label was founded by Shaky Lake and Baky Hike in 2020 business accelerator.</span>
                         <div class="about-company__description__explanation__content">
@@ -140,78 +154,91 @@
     </section>
     <section class="parallax section">
         <div class="conteiner-zero">
-            <img src="./assets/img/musician.png" alt="musician">
         </div>
     </section>
     <section class="roadmap section">
         <div class="medium-container">
-            <img class="roadmap__circle" src="./assets/vector/lime_circle.svg" alt="circle">
-            <img class="roadmap__circle" src="./assets/vector/lime_circle.svg" alt="circle">
-            <img class="roadmap__circle" src="./assets/vector/lime_circle.svg" alt="circle">
+            <!-- <img class="roadmap__circle top" src="./assets/vector/lime_circle.svg" alt="circle">
+            <img class="roadmap__circle middle" src="./assets/vector/lime_circle.svg" alt="circle">
+            <img class="roadmap__circle bottom" src="./assets/vector/lime_circle.svg" alt="circle"> -->
+            <span class="roadmap__top-circle-wrpapper circle-wrpapper">
+                <div class="roadmap__top-circle-wrpapper__circle circle first"></div>
+                <div class="roadmap__top-circle-wrpapper__circle circle second"></div>
+                <div class="roadmap__top-circle-wrpapper__circle circle third"></div>
+                <div class="roadmap__top-circle-wrpapper__circle circle fouth"></div>
+                <div class="roadmap__top-circle-wrpapper__circle circle fifth"></div>
+            </span>
+            <span class="roadmap__middle-circle-wrpapper circle-wrpapper">
+                <div class="roadmap__middle-circle-wrpapper__circle circle first"></div>
+                <div class="roadmap__middle-circle-wrpapper__circle circle second"></div>
+                <div class="roadmap__middle-circle-wrpapper__circle circle third"></div>
+                <div class="roadmap__middle-circle-wrpapper__circle circle fouth"></div>
+                <div class="roadmap__middle-circle-wrpapper__circle circle fifth"></div>
+            </span>
+            <span class="roadmap__bottom-circle-wrpapper circle-wrpapper">
+                <div class="roadmap__bottom-circle-wrpapper__circle circle first"></div>
+                <div class="roadmap__bottom-circle-wrpapper__circle circle second"></div>
+                <div class="roadmap__bottom-circle-wrpapper__circle circle third"></div>
+                <div class="roadmap__bottom-circle-wrpapper__circle circle fouth"></div>
+                <div class="roadmap__bottom-circle-wrpapper__circle circle fifth"></div>
+            </span>
             <div class="small-container">
                 <h3 class="roadmap__title text-header">Roadmap</h3>
-                <div class="line-container">
-                    <div class="phase-wrapper">
-                        <div class="phase-wrapper__date-wrap">
-                            <div class="phase-wrapper__date-wrap__phase-number completed">1</div>
-                            <div class="phase-wrapper__date-wrap__content ">
-                                <p class="phase-wrapper__date-wrap__content__phase-progress">Phase 1 - completed</p>
-                                <p class="phase-wrapper__date-wrap__content__name">Spring 2022 - pre launch</p>
-                            </div>
-                        </div>
-                        <div class="phase-wrapper__content-wrap">
-                            <div class="phase-wrapper__content-wrap__text-lines">
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Website 1.2</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Discord community promotion</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__title">MINTING WAVE NFTs</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__subtitle">WAVE NFTs will be 100% pre-minted and launched as an OpenOcean collection</p>
-                            </div>
-                            <img class="phase-wrapper__content-wrap__flyer" src="./assets/img/flyers/blue-flyer.png" alt="flyer">
+                <div class="phase-wrapper">
+                    <div class="phase-wrapper__date-wrap">
+                        <div class="phase-wrapper__date-wrap__phase-number completed">1</div>
+                        <div class="phase-wrapper__date-wrap__content ">
+                            <p class="phase-wrapper__date-wrap__content__phase-progress">Phase 1 - completed</p>
+                            <p class="phase-wrapper__date-wrap__content__name">Spring 2022 - pre launch</p>
                         </div>
                     </div>
+                    <div class="phase-wrapper__content-wrap">
+                        <div class="phase-wrapper__content-wrap__text-lines">
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Website 1.2</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Discord community promotion</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__title">MINTING WAVE NFTs</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__subtitle">WAVE NFTs will be 100% pre-minted and launched as an OpenOcean collection</p>
+                        </div>
+                        <img class="phase-wrapper__content-wrap__flyer" src="./assets/img/flyers/blue-flyer.png" alt="flyer">
+                    </div>
                 </div>
-                <div class="line-container">
-                    <div class="phase-wrapper">
-                        <div class="phase-wrapper__date-wrap">
-                            <span class="phase-wrapper__date-wrap__phase-number">2</span>
-                            <div class="phase-wrapper__date-wrap__content">
-                                <p class="phase-wrapper__date-wrap__content__phase-progress">Phase 2</p>
-                                <p class="phase-wrapper__date-wrap__content__name">Summer 2022 - GROWTH</p>
-                            </div>
+                <div class="phase-wrapper">
+                    <div class="phase-wrapper__date-wrap">
+                        <span class="phase-wrapper__date-wrap__phase-number">2</span>
+                        <div class="phase-wrapper__date-wrap__content">
+                            <p class="phase-wrapper__date-wrap__content__phase-progress">Phase 2</p>
+                            <p class="phase-wrapper__date-wrap__content__name">Summer 2022 - GROWTH</p>
                         </div>
-                        <div class="phase-wrapper__content-wrap">
-                            <div class="phase-wrapper__content-wrap__text-lines">
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Hiring for 10 positions in</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Partnerships with main Metaverse players</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Partnerships with WEB 2.0 music destribution channels</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__subtitle">Onboarding 100 new artists</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__subtitle">META Record Labels is holding the first screening of aspiring artists from the list of WAVE NFT holders</p>
-                            </div>
-                            <img class="phase-wrapper__content-wrap__flyer" src="./assets/img/flyers/red-flyer.png" alt="flyer">
+                    </div>
+                    <div class="phase-wrapper__content-wrap">
+                        <div class="phase-wrapper__content-wrap__text-lines">
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Hiring for 10 positions in</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Partnerships with main Metaverse players</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Partnerships with WEB 2.0 music destribution channels</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__subtitle">Onboarding 100 new artists</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__subtitle">META Record Labels is holding the first screening of aspiring artists from the list of WAVE NFT holders</p>
                         </div>
-                    </div>  
-                </div>
-                
-                <div class="line-container">
-                    <div class="phase-wrapper">
-                        <div class="phase-wrapper__date-wrap">
-                            <span class="phase-wrapper__date-wrap__phase-number">3</span>
-                            <div class="phase-wrapper__date-wrap__content"> 
-                                <p class="phase-wrapper__date-wrap__content__phase-progress">Phase 3</p>
-                                <p class="phase-wrapper__date-wrap__content__name">Summer 2022 - YOuR new stage</p>
-                            </div>
+                        <img class="phase-wrapper__content-wrap__flyer" src="./assets/img/flyers/red-flyer.png" alt="flyer">
+                    </div>
+                </div>  
+                <div class="phase-wrapper">
+                    <div class="phase-wrapper__date-wrap">
+                        <span class="phase-wrapper__date-wrap__phase-number">3</span>
+                        <div class="phase-wrapper__date-wrap__content"> 
+                            <p class="phase-wrapper__date-wrap__content__phase-progress">Phase 3</p>
+                            <p class="phase-wrapper__date-wrap__content__name">Summer 2022 - YOuR new stage</p>
                         </div>
-                        <div class="phase-wrapper__content-wrap">
-                            <div class="phase-wrapper__content-wrap__text-lines">
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Onboarding new partners</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__title">First live concert in Sandjar</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__title">Live concert in Decentrafield</p>
-                                <p class="phase-wrapper__content-wrap__text-lines__subtitle">We secured dates for out artists to peform in front of the live audience of Metaverse. Check the concert schedule in our
-                                    <a href="https://discord.com/invite/metaplay" target="_blank" rel="noopener noreferrer">Discord</a>.
-                                </p>
-                            </div>
-                            <img class="phase-wrapper__content-wrap__flyer" src="./assets/img/flyers/blue-flyer.png" alt="flyer">
+                    </div>
+                    <div class="phase-wrapper__content-wrap">
+                        <div class="phase-wrapper__content-wrap__text-lines">
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Onboarding new partners</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__title">First live concert in Sandjar</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__title">Live concert in Decentrafield</p>
+                            <p class="phase-wrapper__content-wrap__text-lines__subtitle">We secured dates for out artists to peform in front of the live audience of Metaverse. Check the concert schedule in our
+                                <a href="https://discord.com/invite/metaplay" target="_blank" rel="noopener noreferrer">Discord</a>.
+                            </p>
                         </div>
+                        <img class="phase-wrapper__content-wrap__flyer" src="./assets/img/flyers/blue-flyer.png" alt="flyer">
                     </div>
                 </div>
             </div>
@@ -270,10 +297,10 @@
                 <p class="team__card__title">Shaky Lake</p>
                 <p class="team__card__subtitle">Founder</p>
                 <span class="team__card__contacts contacts">
-                    <button class="contacts__social-media twitter">
+                    <button class="contacts__social-media" onclick="Shaky_Lake_twitter()">
                         <img src="./assets/vector/contacts/twitter_logo.svg" alt="twitter">
                     </button>
-                    <button class="contacts__social-media twitter">
+                    <button class="contacts__social-media" onclick="Shaky_Lake_linkedin()">
                         <img src="./assets/vector/contacts/linked_in_logo.svg" alt="twitter">
                     </button>
                 </span>
@@ -284,10 +311,10 @@
                 <p class="team__card__title">Baky Hike</p>
                 <p class="team__card__subtitle">Co-founder</p>
                 <span class="team__card__contacts contacts">
-                    <button class="contacts__social-media twitter">
+                    <button class="contacts__social-media" onclick="Baky_Hike_twitter()">
                         <img src="./assets/vector/contacts/twitter_logo.svg" alt="twitter">
                     </button>
-                    <button class="contacts__social-media twitter">
+                    <button class="contacts__social-media" onclick="Baky_Hike_linkedin()">
                         <img src="./assets/vector/contacts/linked_in_logo.svg" alt="twitter">
                     </button>
                 </span>
@@ -298,10 +325,10 @@
                 <p class="team__card__title">Vania Do</p>
                 <p class="team__card__subtitle">Producer</p>
                 <span class="team__card__contacts contacts">
-                    <button class="contacts__social-media twitter">
+                    <button class="contacts__social-media" onclick="Vania_Do_twitter()">
                         <img src="./assets/vector/contacts/twitter_logo.svg" alt="twitter">
                     </button>
-                    <button class="contacts__social-media twitter">
+                    <button class="contacts__social-media" onclick="Vania_Do_linkedin()">
                         <img src="./assets/vector/contacts/linked_in_logo.svg" alt="twitter">
                     </button>
                 </span>
@@ -318,7 +345,7 @@
                         <h3 class="description__content-wrapper__title__green text-header">Discord</h3>
                     </h2>
                     <p class="description__content-wrapper__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                    <button class="description__content-wrapper__open-discord-link">
+                    <button class="description__content-wrapper__open-discord-link" onclick="meta_link_discord()">
                         <img class="description__content-wrapper__open-discord-link__discord-logo" src="./assets/vector/discrod_logo.svg" alt="discord logo">
                         Join Discord
                     </button>
@@ -341,9 +368,9 @@
                 <a href="#stories" class="content-wrapper__title anchor-link">Stories</a>
                 <a href="#contacts" class="content-wrapper__title anchor-link">Contact</a>
 
-                <a class="content-wrapper__title cite-creation" href="http://" target="_blank" >Licencing</a>
-                <a class="content-wrapper__title cite-creation" href="http://" target="_blank" >Style Guide</a>
-                <a class="content-wrapper__title cite-creation" href="http://" target="_blank" >Changelog</a>
+                <a class="content-wrapper__title cite-creation" href="https://www.protocol.com/bulletins/meta-coursera-certificate-courses" target="_blank" >Licencing</a>
+                <a class="content-wrapper__title cite-creation" href="https://codeguide.co/" target="_blank" >Style Guide</a>
+                <a class="content-wrapper__title cite-creation" href="https://support.elements.cloud/en/articles/5736350-salesforce-metadata-change-logs" target="_blank" >Changelog</a>
                 <p class="content-wrapper__title subtitle"> 
                     Powered by
                     <a href="http://" target="_blank" rel="noopener noreferrer">Webflow</a>
@@ -354,16 +381,16 @@
                 </p>
             </div>
             <div class="contacts">
-                <button class="contacts__social-media twitter">
+                <button class="contacts__social-media twitter" onclick="meta_link_twitter()">
                     <img src="./assets/vector/contacts/twitter_logo.svg" alt="twitter">
                 </button>
-                <button class="contacts__social-media discord">
+                <button class="contacts__social-media discord" onclick="meta_link_discord()">
                     <img src="./assets/vector/contacts/discord_logo.svg" alt="discord">
                 </button>
-                <button class="contacts__social-media youtube">
+                <button class="contacts__social-media youtube" onclick="meta_link_youtube()">
                     <img src="./assets/vector/contacts/youtube_logo.svg" alt="youtube">
                 </button>
-                <button class="contacts__social-media telegram">
+                <button class="contacts__social-media telegram" onclick="meta_link_telegram()">
                     <img src="./assets/vector/contacts/telegram_logo.svg" alt="telegram">
                 </button>
             </div>
