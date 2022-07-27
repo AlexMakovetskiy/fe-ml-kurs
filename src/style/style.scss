@@ -126,11 +126,7 @@ body {
     }
 }
 
-.header, .section, .footer {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
+
 
 .header {
     padding: 50px 0 10px;
@@ -179,8 +175,9 @@ body {
 
 .intro {
     padding: 60px 20px;
-    @include flex-center-space-between();
-    gap: 50px;
+    .large-container {
+        @include flex-center-space-between();
+    }
 
     .description {
         display: inline-block;
@@ -234,7 +231,7 @@ body {
             transition: 1s;
             z-index: 2;
         }
-        
+
         &__flyer:not(hover) {
             opacity: 0.7;
             transform: scale(1);
@@ -622,7 +619,8 @@ body {
 }
 
 .partners {
-    margin: 0 auto 120px;
+    margin: 0 auto;
+    padding: 0 0 120px;
     &__title {
         margin-bottom: 50px;
         @include dm-mono-font();
@@ -636,14 +634,14 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 84px;
-        grid-row-gap: 60px;
+        grid-column-gap: 60px;
+        grid-row-gap: 45px;
     }
 }
 
 .faq {
     margin-bottom: 100px;
-
+    padding: 0 0 100px;
     .medium-container {
         @include flex-center-space-between();
         flex-wrap: nowrap;
@@ -786,12 +784,7 @@ body {
 
                 &__open-discord-link:hover {
                     background: lightgreen;
-
                 }
-
-
-
-
             }
         }
 
@@ -859,6 +852,8 @@ body {
         }
     }
 }
+
+
 
 
 

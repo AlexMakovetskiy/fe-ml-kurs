@@ -1,0 +1,90 @@
+
+@media (max-width: 1350px) {
+    .header {
+        .medium-container {
+            justify-content: space-around;
+        }
+    }
+
+    .intro {
+
+        .large-container {
+            gap: 20px;
+        }
+
+        .flyer-container__flyer {
+            width: 246px;
+            height: 295px;
+        }
+    }
+
+    .discord-link {
+        .medium-container {
+            .graphic-content {
+                &__flyer {
+                    height: 382px;
+                    width: 343px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        background: limegreen;
+    }
+    .header, .section, .footer {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .large-container {
+        max-width: 1180px;
+    }
+    
+    .medium-container {
+        max-width: 1100px;
+    }
+    
+    .large-container {
+        max-width: 1350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-color: darkblue;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: darkolivegreen;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: darkred;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: darkslategrey;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-color: darkgreen;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        background-color: darkgoldenrod;
+    }
+}
