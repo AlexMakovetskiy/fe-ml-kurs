@@ -4,11 +4,11 @@
         width: 100%;
     }
 
-    .header, .section, .footer,
-    .medium-container,
-    .large-container {
-        overflow: scroll;
-    }
+    // .header, .section, .footer,
+    // .medium-container,
+    // .large-container {
+    //     overflow: scroll;
+    // }
     
     .large-container {
         max-width: 1116px;
@@ -86,7 +86,7 @@
 
 @media (max-width: 1160px) {
     .large-container {
-        max-width: 1067px;
+        max-width: 1070px;
     }
 
     .medium-container {
@@ -121,6 +121,39 @@
         }
     }
 
+    .story { 
+        .about-company {
+            &__tab-wrapper {
+                &__tab {
+                    &__photo-wrap {
+                        transform: translateX(200%);
+
+                        &__photo {
+                            width: 138px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            &__description {
+                gap: 30px;
+                &__explanation {
+                    &__definition {
+                        padding-left: 18px;
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                    }
+                    &__content {
+                        &__subtitle {
+                            font-size: 1.2rem;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .team {
         .medium-container {
             gap: 80px;
@@ -134,38 +167,14 @@
         }
     }
 
-    .footer {
-        .medium-container {
-            gap: 20px;
-    
-            .logo-wrapper {
-                &__rights {
-                    min-width: 200px;
-                    font-size: 1rem;
-                    line-height: 1.6rem;
-                }
-            }
-    
-            .content-wrapper {
-                display: grid;
-                grid-template-columns: repeat(2, 117px) 190px;
-                grid-template-rows: repeat(3, 20px);
-                grid-column-gap: 30px;
-                grid-row-gap: 20px;
-                font-size: 1.2rem;
-                line-height: 1.5rem;
-    
-    
-                &__title.subtitle {
-                    font-size: 1rem;
-                    line-height: 1.2rem;
-                }
-            }
-        }
-    }
+
 }
 
 @media (max-width: 1070px) {
+    .large-container {
+        max-width: 995px;
+    }
+
     .wave-nft {
         padding: 60px 40px;
     
@@ -196,14 +205,346 @@
 }
 
 @media (max-width: 1024px) {
-    body {
-        background-color: black;
+
+    .contacts {
+        gap: 6px;
+
+        &__social-media {
+            padding: 6px;
+            background: white;
+            border: 1px solid transparent;
+        }
+
+        &__social-media img {
+            width: 14px;
+            height: 14px;
+        }
     }
+
+    .header {
+        .medium-container {
+            .navigation {
+                &__link {
+                    font-size: 1.2rem;
+                    line-height: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .intro {
+        padding: 60px 20px;
+    
+        .description {
+            &__title {
+                margin-bottom: 25px;
+                font-size: 3rem;
+                line-height: 3.6rem;
+            }
+    
+            &__subtitle {
+                margin-bottom: 80px;
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+            }
+    
+            &__jump-documentation {
+                padding: 16px 24px;
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+            }
+        }
+        
+        .flyer-container {
+            gap: 5px;
+    
+            &__flyer {
+                width: 165px;
+                height: 200px;
+            }
+        }
+    
+    }
+
+    .wave-nft {
+        padding: 30px;
+    
+        .medium-container {
+            gap: 80px;
+    
+            .wave-content { 
+                min-width: fit-content;
+
+                &__title {
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+            }
+
+            .wave-content img {
+                width: 165px;
+                height: 200px;
+            }
+    
+            .explanation {
+                &__definition {
+                    padding-left: 16px;
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                }
+                &__content {
+                    &__subtitle {
+                        margin-bottom: 18px;
+                        font-size: 1.2rem;
+                        line-height: 1.4rem;
+                    }
+    
+                    .get-nft {
+                        padding: 10px 22px;
+                        font-size: 1rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .artists {
+        .artists-content {
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+    
+            &__card {
+                &__name {
+                    margin-top: 15px;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
+
+                &__photo {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    
+    }
+
+    .story { 
+        .about-company {
+            &__tab-wrapper {
+                &__tab {
+                    &__title {
+                        padding: 22px 0 22px 20px;
+                        font-size: 1.2rem;
+                        line-height: 1.4rem;
+                    }
+                }
+            }
+            &__description {
+                &__explanation {
+                    &__definition {
+                        padding-left: 16px;
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                    }
+                    &__content {
+                        &__subtitle {
+                            font-size: 1rem;
+                            line-height: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .parallax {
+        .conteiner-zero {
+            min-height: 160px;
+        }
+    }
+
+    .roadmap {
+        padding-top: 75px;
+
+        .small-container {
+            padding-bottom: 175px;
+        }
+    }
+
+    .partners {
+        padding: 0 20px 80px;
+        &__title {
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+
+        }
+    
+        &__logo-container {
+            grid-column-gap: 40px;
+            grid-row-gap: 32px;
+        }
+
+        .patners__logo-container__logo {
+            width: 175px;
+            height: 18px;
+        }
+    }
+
+    .faq {
+        margin-bottom: 80px;
+        padding: 0 20px 80px;
+        .medium-container {
+
+            gap: 130px;
+    
+            .faq__name-wrappper {
+                &__title {
+                    margin-bottom: 40px;
+                    font-size: 2.2rem;
+                    line-height: 2.8rem;
+                }  
+
+                &__flyer {
+                    width: 165px;
+                    height: 200px;
+                }
+            }
+    
+            .faq__description {
+                padding: 24px;
+    
+                &__title-content {
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+
+                }
+                &__subtitle {
+                    font-size: .8rem;
+                    line-height: 1.2rem;
+                }
+            } 
+        }
+    }
+
+    .team {
+        
+        margin-bottom: 80px;
+        .ticker-content {
+            margin-bottom: 80px;
+        }
+    
+        .medium-container {
+            gap: 60px;
+            overflow: visible;
+
+            .team__card {
+                &__title {
+                    margin-bottom: 10px;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                }
+    
+                &__subtitle {
+                    margin-bottom: 12px;
+                    font-size: .8rem;
+                    line-height: 1rem;
+
+                }
+    
+                &__description {
+                    font-size: .8rem;
+                    line-height: 1.2rem;
+                }
+                &__photo {
+                    width: 190px;
+                    height: 190px;
+                }
+            }
+        }
+    }
+
+    .discord-link {
+        padding: 90px 40px;
+    
+        .medium-container {
+            .description {
+                padding: 70px 60px 70px 0;
+    
+                &__content-wrapper {
+                    &__title {
+                        font-size: 3rem;
+    
+                        &__green {
+                            margin-bottom: 20px;
+                            font-size: 3rem;
+                        }
+                    }
+                    &__subtitle {
+                        margin-bottom: 26px;
+                        font-size: 1rem;
+                        line-height: 1.6rem;
+                    }
+    
+                    &__open-discord-link {
+                        padding: 10px 18px;
+                        gap: 6px;
+                    }
+                }
+            }
+    
+            .graphic-content {
+                &__flyer {
+                    height: 350px;
+                    width: 295px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 60px 0;
+    
+        .medium-container {
+            max-width: 700px;
+            gap: 40px;
+    
+            .logo-wrapper {
+                &__meta-logo {
+                    margin-bottom: 40px;
+                }
+    
+                &__rights {
+                    min-width: 120px;
+                    font-size: .8rem;
+                    line-height: 1.4rem;
+                }
+            }
+    
+            .content-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 70px) 130px;
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 48px;
+                grid-row-gap: 20px;
+                font-size: 1rem;
+                line-height: 1.2rem;
+    
+                &__title.subtitle {
+                    font-size: .8rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
+    
 }
 
 @media (max-width: 768px) {
     body {
-        background-color: darkolivegreen;
+        background-color: black;
     }
 }
 
@@ -222,11 +563,5 @@
 @media (max-width: 375px) {
     body {
         background-color: darkgreen;
-    }
-}
-
-@media (max-width: 320px) {
-    body {
-        background-color: darkgoldenrod;
     }
 }
