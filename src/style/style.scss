@@ -125,7 +125,7 @@ body {
         border-radius: 0;
     }
 }
-// до 1024
+
 .header {
     padding: 50px 0 10px;
 
@@ -318,13 +318,12 @@ body {
         }
     }
 }
-// проблема контейнера бегущей строки (1120 начинаетзаметна разница)
-// проблема контейнера ( не критическая при наличии padding)
+
 .artists {
     padding: 120px 0;
 
     .artists-content {
-        margin: 0 20px;
+        padding: 0 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -343,8 +342,9 @@ body {
     }
 
 }
-// 1060 размер и позиция картинки , 20% уменьшить размер шрифта контента и уменьшить размеры вкладок
+
 .story {
+    padding-bottom: 114px;
 
     .story__title {
         margin-bottom: 60px;
@@ -439,7 +439,7 @@ body {
         }
     }
 }
-// 1150 краш контейнера
+
 .parallax {
     margin: 114px auto 0;
     width: 100%;
@@ -452,10 +452,10 @@ body {
         background-size: cover;
     }
 }
-//1150 краш контейнера
+
 .roadmap {
     margin-bottom: 0px; 
-    padding: 118px 0 280px;
+    padding-top: 118px;
     overflow: hidden;
 
     .circle-wrpapper {
@@ -477,7 +477,7 @@ body {
     }
 
     &__bottom-circle-wrpapper {
-        top: 90%;
+        top: 80%;
         left: 22%;
     }
 
@@ -511,6 +511,7 @@ body {
     }
 
     .small-container {
+        padding: 0 0 250px;
         position: relative;
         z-index: 10;
         display: flex;
@@ -617,7 +618,7 @@ body {
         
     }
 }
-// 1024 уменьшить шрифт на 20%
+
 .partners {
     margin: 0 auto;
     padding: 0 20px 120px;
@@ -636,9 +637,10 @@ body {
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 60px;
         grid-row-gap: 45px;
+
     }
 }
-//1150 краш контейнера + уменьшить gap
+
 .faq {
     margin-bottom: 100px;
     padding: 0 20px 100px;
@@ -688,11 +690,10 @@ body {
         }
     }
 }
-//1150 краш контейнера
+
 // 375 flex-wrap wrap 
 .team {
     margin-bottom: 230px;
-    padding: 0 40px;
     .ticker-content {
         margin-bottom: 120px;
 
@@ -705,6 +706,7 @@ body {
     }
 
     .medium-container {
+        padding: 0 40px;
         @include flex-center-space-between();
         flex-wrap: nowrap;
         gap: 100px;
@@ -802,7 +804,7 @@ body {
         }
     }
 }
-//1150 краш контейнера + шрифты gap и padding в кнопках 30%
+
 .footer {
     background: #42006A;
     padding: 100px 0;
