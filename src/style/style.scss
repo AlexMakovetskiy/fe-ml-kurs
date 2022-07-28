@@ -125,9 +125,7 @@ body {
         border-radius: 0;
     }
 }
-
-
-
+// до 1024
 .header {
     padding: 50px 0 10px;
 
@@ -320,11 +318,13 @@ body {
         }
     }
 }
-
+// проблема контейнера бегущей строки (1120 начинаетзаметна разница)
+// проблема контейнера ( не критическая при наличии padding)
 .artists {
     padding: 120px 0;
 
     .artists-content {
+        margin: 0 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -343,7 +343,7 @@ body {
     }
 
 }
-
+// 1060 размер и позиция картинки , 20% уменьшить размер шрифта контента и уменьшить размеры вкладок
 .story {
 
     .story__title {
@@ -439,7 +439,7 @@ body {
         }
     }
 }
-
+// 1150 краш контейнера
 .parallax {
     margin: 114px auto 0;
     width: 100%;
@@ -452,7 +452,7 @@ body {
         background-size: cover;
     }
 }
-
+//1150 краш контейнера
 .roadmap {
     margin-bottom: 0px; 
     padding: 118px 0 280px;
@@ -617,10 +617,10 @@ body {
         
     }
 }
-
+// 1024 уменьшить шрифт на 20%
 .partners {
     margin: 0 auto;
-    padding: 0 0 120px;
+    padding: 0 20px 120px;
     &__title {
         margin-bottom: 50px;
         @include dm-mono-font();
@@ -638,10 +638,10 @@ body {
         grid-row-gap: 45px;
     }
 }
-
+//1150 краш контейнера + уменьшить gap
 .faq {
     margin-bottom: 100px;
-    padding: 0 0 100px;
+    padding: 0 20px 100px;
     .medium-container {
         @include flex-center-space-between();
         flex-wrap: nowrap;
@@ -688,9 +688,11 @@ body {
         }
     }
 }
-
+//1150 краш контейнера
+// 375 flex-wrap wrap 
 .team {
     margin-bottom: 230px;
+    padding: 0 40px;
     .ticker-content {
         margin-bottom: 120px;
 
@@ -743,7 +745,7 @@ body {
 }
 
 .discord-link {
-    padding: 120px 0;
+    padding: 120px 40px;
 
     .medium-container {
         display: grid;
@@ -800,7 +802,7 @@ body {
         }
     }
 }
-
+//1150 краш контейнера + шрифты gap и padding в кнопках 30%
 .footer {
     background: #42006A;
     padding: 100px 0;
