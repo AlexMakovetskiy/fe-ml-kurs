@@ -126,12 +126,6 @@ body {
     }
 }
 
-.header, .section, .footer {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 .header {
     padding: 50px 0 10px;
 
@@ -179,8 +173,9 @@ body {
 
 .intro {
     padding: 60px 20px;
-    @include flex-center-space-between();
-    gap: 50px;
+    .large-container {
+        @include flex-center-space-between();
+    }
 
     .description {
         display: inline-block;
@@ -234,7 +229,7 @@ body {
             transition: 1s;
             z-index: 2;
         }
-        
+
         &__flyer:not(hover) {
             opacity: 0.7;
             transform: scale(1);
@@ -274,6 +269,8 @@ body {
                 margin-bottom: 40px;
             }
         }
+
+        
 
         .explanation {
             &__definition {
@@ -325,9 +322,10 @@ body {
 }
 
 .artists {
-    padding: 120px 0;
+    padding: 80px 0;
 
     .artists-content {
+        padding: 0 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -348,6 +346,7 @@ body {
 }
 
 .story {
+    padding-bottom: 114px;
 
     .story__title {
         margin-bottom: 60px;
@@ -458,7 +457,7 @@ body {
 
 .roadmap {
     margin-bottom: 0px; 
-    padding: 118px 0 280px;
+    padding-top: 118px;
     overflow: hidden;
 
     .circle-wrpapper {
@@ -480,7 +479,7 @@ body {
     }
 
     &__bottom-circle-wrpapper {
-        top: 90%;
+        top: 80%;
         left: 22%;
     }
 
@@ -514,6 +513,7 @@ body {
     }
 
     .small-container {
+        padding: 0 0 250px;
         position: relative;
         z-index: 10;
         display: flex;
@@ -622,7 +622,8 @@ body {
 }
 
 .partners {
-    margin: 0 auto 120px;
+    margin: 0 auto;
+    padding: 0 20px 120px;
     &__title {
         margin-bottom: 50px;
         @include dm-mono-font();
@@ -636,14 +637,14 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 84px;
-        grid-row-gap: 60px;
+        grid-column-gap: 60px;
+        grid-row-gap: 45px;
     }
 }
 
 .faq {
     margin-bottom: 100px;
-
+    padding: 0 20px 100px;
     .medium-container {
         @include flex-center-space-between();
         flex-wrap: nowrap;
@@ -691,6 +692,7 @@ body {
     }
 }
 
+// 375 flex-wrap wrap 
 .team {
     margin-bottom: 230px;
     .ticker-content {
@@ -705,6 +707,7 @@ body {
     }
 
     .medium-container {
+        padding: 0 40px;
         @include flex-center-space-between();
         flex-wrap: nowrap;
         gap: 100px;
@@ -743,9 +746,9 @@ body {
         }
     }
 }
-
+// - размер изображения, gap, -размер шрифта title, подогнать правый блок для нормального отображения
 .discord-link {
-    margin-bottom: 118px;
+    padding: 120px 40px;
 
     .medium-container {
         display: grid;
@@ -780,18 +783,14 @@ body {
                     @include flex-center();
                     gap: 8px;
                     background: $custon-green;
+                    border: 1px solid transparent;
                     color: black;
                     transition: 1s;
                 }
 
                 &__open-discord-link:hover {
                     background: lightgreen;
-
                 }
-
-
-
-
             }
         }
 
@@ -806,7 +805,7 @@ body {
         }
     }
 }
-
+// контейнер, шрифты, отступы
 .footer {
     background: #42006A;
     padding: 100px 0;
@@ -859,6 +858,8 @@ body {
         }
     }
 }
+
+
 
 
 
